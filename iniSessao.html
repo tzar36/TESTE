@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+	</head>
+<body>
+	<?php
+	session_start();
+		echo "Escrevendo os dados da sessao";
+		$_SESSION['nome'] = 'Ana';
+		$_SESSION['sobrenome'] = 'Maria';
+		$_SESSION['idade'] = 23;
+		//unset($_SESSION['nome']);Remove uma unica variável
+		session_unset();//Destroi as variáveis da sessão.
+		session_destroy();//Destroi toda a seesão.
+		printf("<br><a href=lerSessao.php?".SID.">Nova Página</a>");
+	?>
+</body>
+</html>	
